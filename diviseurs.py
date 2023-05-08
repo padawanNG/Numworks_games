@@ -1,3 +1,4 @@
+# Coded by M-A G.  All rights reserved
 from math import *
 
 j=int(input("Quel nombre:"))
@@ -12,3 +13,5 @@ print(divs)
 
 if divs[1]==j:
   print(j,"est premier !!!")
+
+# Coded by M-A G.  All rights reserved  
