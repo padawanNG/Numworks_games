@@ -1,3 +1,5 @@
+# Coded by M-A G.  All rights reserved
+
 # Importation des modules
 from kandinsky import *
 from ion import *
@@ -94,3 +96,5 @@ while jeu_fini==False:
     circle(34*selection+24,23,"white")
     draw_string("Match nul",120,13)
     break
+
+# Coded by M-A G.  All rights reserved    
