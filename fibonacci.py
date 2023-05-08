@@ -1,3 +1,4 @@
+# Coded by M-A G.  All rights reserved
 from math import *
 
 kk = []
