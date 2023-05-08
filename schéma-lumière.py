@@ -1,3 +1,5 @@
+# Coded by M-A G.  All rights reserved
+
 from math import *
 from turtle import *
 def lum(a,b):
@@ -48,3 +50,5 @@ def lum(a,b):
   write("i1=")
   goto(-120,-90)
   write(str(a))
+
+  # Coded by M-A G.  All rights reserved
