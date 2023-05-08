@@ -61,3 +61,5 @@ else:
     print("")
     print("Bravo, belle victoire !")
     print("Le mot à trouver était bel et bien \"",mot,"\"")
+
+# Coded by M-A G.  All rights reserved    
