@@ -1,5 +1,5 @@
+# Coded by M-A G.  All rights reserved
 import random
-
 
 # Fonction pour afficher le plateau de jeu
 def display_board(board):
