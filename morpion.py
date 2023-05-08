@@ -1,3 +1,5 @@
+# Coded by M-A G.  All rights reserved
+
 # Initialisation du tableau de jeu
 board = ["-", "-", "-",
          "-", "-", "-",
@@ -138,5 +140,5 @@ print("====================")
 print(" Fin du programme ! ")
 print("====================")
 
-
+# Coded by M-A G.  All rights reserved
 
