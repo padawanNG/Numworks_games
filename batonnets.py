@@ -1,3 +1,5 @@
+# Coded by M-A G.  All rights reserved
+
 import random
 from time import *
 
@@ -134,3 +136,4 @@ while u!=1:
       print("------------------------")
       print("")
       break
+# Coded by M-A G.  All rights reserved
