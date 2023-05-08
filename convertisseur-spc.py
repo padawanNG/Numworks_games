@@ -1,3 +1,4 @@
+# Coded by M-A G.  All rights reserved
 from math import *
 
 print("Convertir de...")
@@ -57,3 +58,5 @@ if j>i:
   f=k*10**(-l)
         
 print("Cela donne",f)
+
+# Coded by M-A G.  All rights reserved
