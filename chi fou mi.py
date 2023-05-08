@@ -1,5 +1,8 @@
+# Coded by M-A G.  All rights reserved
+
 import random
 from random import *
+
 score=0
 print ("---------------------------------------------------------------")
 print ("Bienvenue au grand tournoi de CHI-FOU-MI (en trois manches) !!!")
@@ -50,3 +53,6 @@ if (score==1) :
   print ("Dommage, tu n'as gagné qu'une fois sur trois. Tu as donc PERDU")
 if (score==3) :
   print ("Bravo, tu as gagné le tournoi !!!")
+
+  
+  # Coded by M-A G.  All rights reserved
