@@ -1,3 +1,4 @@
+# Coded by M-A G.  All rights reserved
 from math import *
 
 print('')
@@ -44,3 +45,5 @@ print('')
 print("==================")
 print(" Fin du programme ")
 print("==================")
+
+# Coded by M-A G.  All rights reserved
