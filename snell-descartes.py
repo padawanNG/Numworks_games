@@ -1,3 +1,4 @@
+# Coded by M-A G.  All rights reserved
 import turtle
 import math
 from math import *
@@ -44,3 +45,5 @@ elif p==4:
   c=float(input()) 
   k=sin(a)*c/sin(b)
   print("La valeur de n2 est",k)
+  
+  # Coded by M-A G.  All rights reserved
