@@ -1,4 +1,4 @@
-# Credits to Numworks dev team
+# Coded by M-A G.  All rights reserved
 from math import *
 
 def co(xa,ya,xb,yb):
@@ -12,3 +12,5 @@ def colin(xab,yab,xcd,ycd):
 
 def rect(xab,yab,xcd,ycd):
   return xab*xcd+ycd*yab==0
+
+# Coded by M-A G.  All rights reserved
