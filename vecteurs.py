@@ -1,7 +1,14 @@
 # Credits to Numworks dev team
 from math import *
 
-def coordinates(x_A,y_A,x_B,y_B):
-  return x_B-x_A,y_B-y_A
-def collinear(x_1,y_1,x_2,y_2):
-  return x_1*y_2-x_2*y_1==0
+def co(xa,ya,xb,yb):
+  return xb-xa,yb-ya
+  
+def mid(xa,ya,xb,yb):
+  return (xa+xb)/2,(ya+yb)/2
+
+def colin(xab,yab,xcd,ycd):
+  return xab*ycd-xcd*yab==0
+
+def rect(xab,yab,xcd,ycd):
+  return xab*xcd+ycd*yab==0
