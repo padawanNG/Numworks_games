@@ -1,4 +1,4 @@
-# Credits to zii for coding this game : https://my.numworks.com/python/ziii
+# Credits to ziii for coding this game : https://my.numworks.com/python/ziii
 
 from kandinsky import fill_rect as f, draw_string as d
 from ion import *
@@ -144,4 +144,4 @@ while 1:
     elif points<0:
       d(str(-1*points),226,30,COLORS[8],COLORS[0])
 
-# Credits to zii for coding this game : https://my.numworks.com/python/ziii      
+# Credits to ziii for coding this game : https://my.numworks.com/python/ziii      
