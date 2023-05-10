@@ -1,3 +1,5 @@
+# Credits to ziii for coding this game : https://my.numworks.com/python/ziii
+
 from random import *
 from kandinsky import fill_rect as f, draw_string as d
 from ion import *
@@ -89,3 +91,5 @@ while run:
     elif bombs==0:
       d("you lose !",80,100,COLORS[0],COLORS[2])
       run=0
+
+# Credits to ziii for coding this game : https://my.numworks.com/python/ziii      
