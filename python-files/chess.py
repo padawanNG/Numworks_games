@@ -1,3 +1,5 @@
+# Credits to zii for coding this game : https://my.numworks.com/python/ziii
+
 from kandinsky import fill_rect as f, draw_string as d
 from ion import *
 from time import monotonic
@@ -141,3 +143,5 @@ while 1:
       d(str(points),226,30,COLORS[7],COLORS[1])
     elif points<0:
       d(str(-1*points),226,30,COLORS[8],COLORS[0])
+
+# Credits to zii for coding this game : https://my.numworks.com/python/ziii      
