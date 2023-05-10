@@ -1,3 +1,5 @@
+# Coded by M-A G.  All rights reserved
+
 from math import cos,sin,pi
 from kandinsky import *
 from ion import *
@@ -141,3 +143,5 @@ while 1:
   while not keydown(KEY_EXE):
     draw_string("Score : "+str(score[0])+" - "+str(score[1]),60,0,'red')
     draw_string("EXE",145,131,'purple','cyan')
+
+# Coded by M-A G.  All rights reserved    
