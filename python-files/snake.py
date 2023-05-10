@@ -1,3 +1,5 @@
+# Credits to zii for coding this game : https://my.numworks.com/python/ziii
+
 from random import *
 from kandinsky import fill_rect as f, draw_string as d
 from ion import *
@@ -56,3 +58,5 @@ while run:
         d("You lost",0,0,COLORS[4],COLORS[0])
         run=0
     f(body[0][0]*size,body[0][1]*size,size,size,COLORS[3])
+    
+    # Credits to zii for coding this game : https://my.numworks.com/python/ziii
