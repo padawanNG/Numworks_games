@@ -191,7 +191,7 @@ def actu_src(): #Actualise le score
 
 #Lien article
 rect(0,200,320,22,(148,113,222))
-txt("Code by programmes-numworks.fr",33,202,(242,)*3,(148,113,222))
+txt("Code by programmes-numworks.fr",11,202,(242,)*3,(148,113,222))
 
 affichage_src()
 selection()
