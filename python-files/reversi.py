@@ -200,7 +200,7 @@ def init():
   pos = [2,3]
   rec(0,0,320,200,col[6])
   rec(0,200,320,22,col[3])
-  txt("Code by programmes-numworks.fr",45,202,col[11],col[3])
+  txt("Code by programmes-numworks.fr",11,202,col[11],col[3])
   grille(x_g,y_g,len_x,len_y,c,col[0])
   param = 1
   ai_enable_indice = 1
