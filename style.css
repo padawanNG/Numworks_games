@@ -69,6 +69,6 @@ tr:hover {
   background-color: #f2f2f2;
 }
 
-p {
+p, h3 {
   text-align: center;
 }  
