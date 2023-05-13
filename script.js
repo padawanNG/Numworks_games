@@ -7,9 +7,9 @@ function submitFile() {
   formData.append('file', file);
 
   // Configurer la requête pour créer un nouveau commit avec le fichier
-  const repoName = 'nom-de-votre-repository';
-  const username = 'votre-nom-d-utilisateur-github';
-  const accessToken = 'votre-token-d-acces-personnel-github';
+  const repoName = 'Numworks_games';
+  const username = 'padawanNG';
+  const accessToken = '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';
   const commitMessage = 'Ajout d\'un nouveau fichier';
   const branchName = 'main';
   const filePath = 'submitted-files/' + file.name;
