@@ -1,5 +1,3 @@
-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
-
 function submitFile() {
   const fileInput = document.getElementById('fileInput');
   const file = fileInput.files[0];
