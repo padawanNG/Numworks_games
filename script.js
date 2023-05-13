@@ -14,11 +14,11 @@ function submitFile() {
   const branchName = 'main';
   const filePath = 'submitted-files/' + file.name;
 
-  const url = `https://api.github.com/repos/${username}/${repoName}/contents/${filePath}`;
+  const url = `https://api.github.com/repos/$padawanNG/$Numworks_games/contents/$submitted-files`;
   const options = {
     method: 'PUT',
     headers: {
-      'Authorization': `Bearer ${accessToken}`,
+      'Authorization': `Bearer $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`,
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
