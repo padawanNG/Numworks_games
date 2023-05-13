@@ -18,13 +18,14 @@ function submitFile() {
   const options = {
     method: 'PUT',
     headers: {
-      'Authorization': `Bearer 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`,
-      'Content-Type': 'application/json'
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json; charset=utf-8'
     },
     body: JSON.stringify({
       message: commitMessage,
       content: btoa(file),
-      branch: branchName
+      branch: branchName,
+      path: filePath
     })
   };
 
