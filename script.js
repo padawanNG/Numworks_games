@@ -14,7 +14,7 @@ function submitFile() {
   const branchName = 'main';
   const filePath = 'submitted-files/' + file.name;
 
-  const url = `https://api.github.com/repos/padawanNG/Numworks_games/contents/submitted-files`;
+  const url = `https://api.github.com/repos/${username}/${repoName}/contents/${filePath}`;
   const options = {
     method: 'PUT',
     headers: {
