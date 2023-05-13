@@ -1,39 +1,44 @@
 function submitFile() {
-  const fileInput = document.getElementById('fileInput');
-  const file = fileInput.files[0];
-  if (file && file.name.endsWith('.py')) {
-    const formData = new FormData();
-    formData.append('file', file);
-    fetch('https://uploads.github.com/repos/PadawanNG/Numworks_games/git/blobs', {
-      method: 'POST',
-      headers: {
-        'Authorization': 'token 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',
-        'Content-Type': 'text/plain'
-      },
-      body: file
-    })
-    .then(response => response.json())
-    .then(data => {
-      const blobSha = data.sha;
-      const path = 'submitted-files/' + file.name;
-      fetch('https://api.github.com/repos/oadawanNG/Numworks_games/contents/' + path, {
-        method: 'PUT',
-        headers: {
-          'Authorization': 'token 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',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          message: 'Ajout d\'un fichier ' + file.name,
-          content: blobSha,
-          path: path,
-          branch: 'main'
-        })
-      })
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.error(error));
-    })
-    .catch(error => console.error(error));
-  }
-}
+  // Récupérer le fichier déposé par l'utilisateur
+  const file = document.getElementById('fileInput').files[0];
 
+  // Créer un objet FormData contenant le fichier
+  const formData = new FormData();
+  formData.append('file', file);
+
+  // Configurer la requête pour créer un nouveau commit avec le fichier
+  const repoName = 'nom-de-votre-repository';
+  const username = 'votre-nom-d-utilisateur-github';
+  const accessToken = 'votre-token-d-acces-personnel-github';
+  const commitMessage = 'Ajout d\'un nouveau fichier';
+  const branchName = 'main';
+  const filePath = 'submitted-files/' + file.name;
+
+  const url = `https://api.github.com/repos/${username}/${repoName}/contents/${filePath}`;
+  const options = {
+    method: 'PUT',
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      message: commitMessage,
+      content: btoa(file),
+      branch: branchName
+    })
+  };
+
+  // Envoyer la requête pour créer le nouveau commit
+  fetch(url, options)
+    .then(response => {
+      if (response.ok) {
+        alert('Le fichier a été ajouté avec succès!');
+      } else {
+        alert('Une erreur est survenue lors de l\'ajout du fichier.');
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      alert('Une erreur est survenue lors de l\'ajout du fichier.');
+    });
+}
