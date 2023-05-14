@@ -8,7 +8,6 @@ function submitFile() {
   const reader = new FileReader();
   reader.onload = function(event) {
     const content = event.target.result;
-    const encodedContent = btoa(content);
     
     const xhr = new XMLHttpRequest();
     xhr.open("PUT", url, true);
@@ -24,6 +23,17 @@ function submitFile() {
         }
       }
     };
+    
+    const data = JSON.stringify({
+      message: "Ajout de " + file.name,
+      content: btoa(String.fromCharCode.apply(null, new Uint8Array(content)))
+    });
+    
+    xhr.send(data);
+  };
+  
+  reader.readAsArrayBuffer(file);
+}    
     
     const data = JSON.stringify({
       message: "Ajout de " + file.name,
