@@ -4,7 +4,7 @@ $fileName = $file['name'];
 $fileTmpName = $file['tmp_name'];
 
 $githubUsername = 'padawanNG';
-$githubToken = 'votre_token_github';
+$githubToken = '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';
 
 $repoName = 'Numworks_games';
 $branchName = 'main';
