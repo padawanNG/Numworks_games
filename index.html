@@ -3,8 +3,6 @@
   <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8666225912541965"
      crossorigin="anonymous"></script>
-    <script src=script.js></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Programmes Python pour NumWorks</title>
     <link rel="icon" href="https://padawanNG.github.io/Numworks_games/snakes_318-368381 (1).ico" type="image/x-icon">    
     <meta charset="UTF-8">
@@ -133,8 +131,10 @@
         </tbody>
       </table>
       <h2>Proposer un programme</h2>
+      <form action="http://localhost:3000/submit-file" method="post" enctype="multipart/form-data">
       <input type="file" id="fileInput" accept=".py">
       <button type="submit" onclick="submitFile()">Soumettre</button> 
+      </form>
       <br>
       <p><strong>Contact :</strong> <a href="mailto:programmesnumworks@gmail.fr">programmesnumworks@gmail.fr</a></p>
     </main>
