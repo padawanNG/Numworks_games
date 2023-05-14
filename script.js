@@ -43,7 +43,3 @@ function submitFile() {
       alert('Une erreur est survenue lors de l\'ajout du fichier.');
     });
 }
-
-module.exports = {
-  submitFile
-}
