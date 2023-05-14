@@ -1,45 +1,44 @@
-function submitFile() {
-  // Récupérer le fichier déposé par l'utilisateur
-  const file = document.getElementById('fileInput').files[0];
+// Récupérer le formulaire HTML
+const form = document.getElementById('upload-form');
 
-  // Créer un objet FormData contenant le fichier
-  const formData = new FormData();
-  formData.append('file', file);
+// Attacher un écouteur d'événements pour intercepter la soumission du formulaire
+form.addEventListener('submit', async (event) => {
+  event.preventDefault(); // Empêcher le comportement de soumission par défaut
 
-  // Configurer la requête pour créer un nouveau commit avec le fichier
-  const repoName = 'Numworks_games';
-  const username = 'padawanNG';
-  const accessToken = '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';
-  const commitMessage = 'Ajout d\'un nouveau fichier';
-  const branchName = 'main';
-  const filePath = 'submitted-files/' + file.name;
+  // Récupérer le fichier sélectionné par l'utilisateur
+  const file = event.target.fileInput.files[0];
 
-  const url = `https://api.github.com/repos/${username}/${repoName}/contents/${filePath}`;
-  const options = {
-    method: 'PUT',
-    headers: {
-      'Authorization': `Bearer ${accessToken}`,
-      'Content-Type': 'application/json; charset=utf-8'
-    },
-    body: JSON.stringify({
-      message: commitMessage,
-      content: btoa(file),
-      branch: branchName,
-      path: filePath
-    })
-  };
+  // Configuration de la requête POST pour télécharger le fichier
+  const owner = 'padawanNG';
+  const repo = 'Numworks_games';
+  const path = `submitted-files/${file.name}`;
+  const message = 'Ajout d\'un nouveau fichier';
+  const content = await readFileAsync(file);
+  const token = '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';
 
-  // Envoyer la requête pour créer le nouveau commit
-  fetch(url, options)
-    .then(response => {
-      if (response.ok) {
-        alert('Le fichier a été ajouté avec succès!');
-      } else {
-        alert('Une erreur est survenue lors de l\'ajout du fichier.');
-      }
-    })
-    .catch(error => {
-      console.error(error);
-      alert('Une erreur est survenue lors de l\'ajout du fichier.');
+  // Télécharger le fichier sur GitHub en utilisant Octokit
+  const octokit = new Octokit({ auth: token });
+  try {
+    const response = await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
+      owner,
+      repo,
+      path,
+      message,
+      content
     });
+    console.log('Le fichier a été téléchargé avec succès sur GitHub !');
+  } catch (error) {
+    console.error(error);
+    alert('Une erreur est survenue lors de l\'envoi du fichier.');
+  }
+});
+
+// Fonction utilitaire pour lire le contenu du fichier en tant que texte
+function readFileAsync(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsText(file);
+  });
 }
