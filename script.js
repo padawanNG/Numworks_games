@@ -9,7 +9,7 @@ function submitFile() {
   // Configurer la requête pour créer un nouveau commit avec le fichier
   const repoName = 'Numworks_games';
   const username = 'padawanNG';
-  const accessToken = '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';
+  const accessToken = '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';
   const commitMessage = 'Ajout d\'un nouveau fichier';
   const branchName = 'main';
   const filePath = 'submitted-files/' + file.name;
@@ -19,7 +19,7 @@ function submitFile() {
     method: 'PUT',
     headers: {
       'Authorization': `Bearer ${accessToken}`,
-      'Content-Type': 'application/json; charset=utf-8'
+      'Content-Type': 'application/vnd.github.v3+json'
     },
     body: JSON.stringify({
       message: commitMessage,
