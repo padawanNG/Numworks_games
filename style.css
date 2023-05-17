@@ -93,3 +93,6 @@ button:hover {
   background-color: #0050a0;
 }
 
+tr[data-link="#"] {
+      display: none;
+}
