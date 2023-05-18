@@ -1,3 +1,6 @@
+# Credits : Thomas S.
+# https://nsi.xyz/numapps/reversi-en-python-numworks/
+
 from random import choice
 from kandinsky import fill_rect as rec, draw_string as txt
 from ion import keydown as k
@@ -285,3 +288,6 @@ def play():
       deplacement(pos_old)
   gameover()
 init()
+
+# Credits : Thomas S.
+# https://nsi.xyz/numapps/reversi-en-python-numworks/
