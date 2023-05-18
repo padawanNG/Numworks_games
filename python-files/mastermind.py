@@ -1,3 +1,6 @@
+# Credits : Ilyas R. et Vincent ROBERT
+# https://nsi.xyz/numapps/mastermind-en-python-numworks/
+
 from kandinsky import draw_string as txt, fill_rect as rec
 from ion import keydown
 from random import choice
@@ -299,3 +302,6 @@ def mastermind():
 
 
 mastermind()
+
+# Credits : Ilyas R. et Vincent ROBERT
+# https://nsi.xyz/numapps/mastermind-en-python-numworks/
