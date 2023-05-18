@@ -1,3 +1,6 @@
+# Credits : Robin C.
+# https://nsi.xyz/numapps/puissance-4-en-python-numworks/
+
 from kandinsky import fill_rect as rect, draw_string as txt
 from time import sleep
 from ion import keydown
@@ -195,3 +198,6 @@ txt("Code by programmes-numworks.fr",11,202,(242,)*3,(148,113,222))
 
 affichage_src()
 selection()
+
+# Credits : Robin C.
+# https://nsi.xyz/numapps/puissance-4-en-python-numworks/
