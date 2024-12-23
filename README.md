@@ -20,5 +20,3 @@ The project is now live at : programmes-numworks.fr
 
 
 MAG
-JS
-CG ;)
